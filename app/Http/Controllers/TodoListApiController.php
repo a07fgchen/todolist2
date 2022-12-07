@@ -60,11 +60,11 @@ class TodoListApiController extends Controller
     public function updateContent(Request $request, $id)
     {
         $data = $request->validate([
-            'cotent' => 'required'
+            'content' => 'required'
         ]);
 
         TodoList::where('id', $id)->update([
-            'cotent' => $data['content']
+            'content' => $data['content']
         ]);
     }
     /**
